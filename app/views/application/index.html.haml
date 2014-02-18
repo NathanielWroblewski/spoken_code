@@ -28,5 +28,8 @@
           'semicolon': ->
             code += ';'
             $('#code').val code
+          'remove class :term': (term) ->
+            code += ".removeClass('" + term + "')"
+            $('#code').val code
         annyang.addCommands commands
         annyang.start()
