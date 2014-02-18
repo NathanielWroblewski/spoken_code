@@ -25,5 +25,8 @@
           'add class :term': (term) ->
             code += ".addClass('" + term + "')"
             $('#code').val code
+          'semicolon': ->
+            code += ';'
+            $('#code').val code
         annyang.addCommands commands
         annyang.start()
