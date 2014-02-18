@@ -31,5 +31,8 @@
           'remove class :term': (term) ->
             code += ".removeClass('" + term + "')"
             $('#code').val code
+          'dot :term': (term) ->
+            code += "'." + term + "')"
+            $('#code').val code
         annyang.addCommands commands
         annyang.start()
