@@ -4,8 +4,7 @@
 //= require modernizr
 //= require backbone
 //= require foundation
+//= require annyang
 //= require_tree .
-
-$(document).foundation();
 
 $(function(){ $(document).foundation(); });

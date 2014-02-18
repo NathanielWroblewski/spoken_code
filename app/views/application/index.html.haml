@@ -1,0 +1,29 @@
+.row
+  .small-12.columns.center
+    %h1 Spoken Code
+    %p Whisper Sweet Codings
+    %br
+    %br
+    %h3
+      Speak Code Using the
+      = link_to 'Grammar Rules', '#'
+  .small-6.columns.small-offset-3.end
+    %textarea#code{style: 'height: 300px'}
+
+
+  - content_for :javascript do
+    :coffee
+      code = ''
+      if annyang
+        commands =
+          'dollar': ->
+            code += '$('
+            $('#code').val code
+          'hash :term': (term) ->
+            code += ("'#" + term + "')")
+            $('#code').val code
+          'add class :term': (term) ->
+            code += ".addClass('" + term + "')"
+            $('#code').val code
+        annyang.addCommands commands
+        annyang.start()
