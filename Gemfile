@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
+ruby '2.1.0'
 
 gem 'rails', '>= 4.0.0'
 
@@ -11,6 +11,7 @@ gem 'delayed_job_active_record', '>= 4.0.0'
 gem 'devise'
 gem 'email_validator'
 gem 'figaro'
+gem 'foundation-rails'
 gem 'haml_coffee_assets'
 gem 'jquery-rails'
 gem 'paperclip'
@@ -22,7 +23,6 @@ gem 'simple_form'
 gem 'travis'
 gem 'uglifier'
 gem 'unicorn'
-gem 'zurb-foundation'
 
 group :development do
   gem 'better_errors'
